@@ -27,6 +27,10 @@ body {
   width: 40px;
 }
 
+.cabecalho__perfil{
+  display: none;
+}
+
 .cabecalho__notificacao i::before {
   content: "\e906";
   font-size: 24px;
@@ -203,3 +207,51 @@ body {
   gap: 16px;
 }
 
+@media screen and (min-width: 1330px){
+  body{
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+
+  .cabecalho{
+    background-color: #1d232a;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 32px;
+    padding: 16px 60px;
+    height: 80px;
+    box-sizing: border-box;
+  }
+
+  .cabecalho__logo, .cabecalho__menu{
+    display: none;
+  }
+
+  .cabecalho__perfil{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 8px;
+    align-items: center;
+    justify-content: flex-end;
+    color: #95999c;
+    padding: 8px 32px;
+    border-right: 1px solid #95999c;
+  }
+
+  .cabecalho__perfil::before{
+    content: "";
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-image: url(../img/produto_2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .cabecalho__perfil::after{
+    content: '\e90d';
+    color: #fff;
+    font-size: 1.5rem;
+  }
+}
